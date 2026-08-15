@@ -29,7 +29,7 @@ RDEPEND="
 	=mate-base/mate-settings-daemon-${MATE_BRANCH}*
 	=x11-wm/marco-${MATE_BRANCH}*
 	base? (
-		=mate-base/caja-${MATE_BRANCH}*
+		>=mate-base/caja-${MATE_BRANCH}
 		=mate-base/mate-applets-meta-${MATE_BRANCH}*
 		=mate-base/mate-control-center-${MATE_BRANCH}*
 		=mate-extra/mate-media-${MATE_BRANCH}*
