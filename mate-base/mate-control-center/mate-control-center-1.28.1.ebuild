@@ -67,13 +67,11 @@ BDEPEND="${COMMON_DEPEND}
 	x11-base/xorg-proto
 	virtual/pkgconfig
 "
-PATCHES=(
-	"${FILESDIR}"/${PN}-${MATE_MIN_VER}-optional-systemd.patch
-)
 
 src_configure() {
 	mate_src_configure \
 		--disable-update-mimedb \
 		$(use_enable nls) \
-		$(use_enable debug)
+		$(use_enable debug) \
+		$(use_enable systemd)
 }
