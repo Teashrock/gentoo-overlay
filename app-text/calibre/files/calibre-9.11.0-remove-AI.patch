@@ -1,0 +1,27 @@
+Remove LLMs and AI as dependencies, see https://lwn.net/Articles/1049886/
+Bug: https://bugs.gentoo.org/969475
+
+--- a/src/calibre/customize/builtins.py
++++ b/src/calibre/customize/builtins.py
+@@ -4,12 +4,6 @@
+ import glob
+ import os
+ 
+-from calibre.ai.github import GitHubAI
+-from calibre.ai.google import GoogleAI
+-from calibre.ai.lm_studio import LMStudioAI
+-from calibre.ai.ollama import OllamaAI
+-from calibre.ai.open_router import OpenRouterAI
+-from calibre.ai.openai_compatible import OpenAICompatible
+ from calibre.constants import numeric_version
+ from calibre.customize import FileTypePlugin, InterfaceActionBase, MetadataReaderPlugin, MetadataWriterPlugin, PreferencesPlugin, StoreBase
+ from calibre.ebooks.html.to_zip import HTML2ZIP
+@@ -1975,8 +1969,6 @@
+ 
+ # }}}
+ 
+-plugins.extend((OpenRouterAI, GoogleAI, GitHubAI, OllamaAI, LMStudioAI, OpenAICompatible))
+-
+ if __name__ == '__main__':
+     # Test load speed
+     import subprocess
